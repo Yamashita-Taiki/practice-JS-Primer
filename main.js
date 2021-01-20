@@ -35,8 +35,15 @@ switch (year) {
 // 文字列から数値へ明示的に変換するにはNumberコンストラクタ関数が利用できます。
 // const input = window.prompt("数字を入力してください", "42");
 // 文字列を数値に変換する
-const num = Number(input);
+// const num = Number(input);
 console.log(typeof num); // => "number"
-console.log(num);
 
 console.log(typeof NaN); // => "number"
+
+// デフォルト引数
+function echo(x = 100) {
+  return x;
+}
+
+console.log(echo(1)); // => 1
+console.log(echo()); // => "デフォルト値"
