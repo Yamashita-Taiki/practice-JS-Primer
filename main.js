@@ -47,3 +47,14 @@ function echo(x = 100) {
 
 console.log(echo(1)); // => 1
 console.log(echo()); // => "デフォルト値"
+
+// const array = [1, 2, 3];
+// // 1,2,3と順番に値が渡されコールバック関数（匿名関数）が処理する
+// const doubleArray = array.map(function(value) {
+//     return value * 2; // 返した値をまとめた配列ができる
+// });
+// console.log(doubleArray); // => [2, 4, 6]
+
+const array = [1,2,3];
+const doubleArray = array.map(value => value * 2)
+console.log(doubleArray)
