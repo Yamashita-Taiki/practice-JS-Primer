@@ -58,3 +58,8 @@ console.log(echo()); // => "デフォルト値"
 const array = [1,2,3];
 const doubleArray = array.map(value => value * 2)
 console.log(doubleArray)
+
+const a = 0
+ while(a<10){
+     console.log(`the V is: ${a}`)
+ }
