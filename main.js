@@ -77,3 +77,24 @@ const obj2 = {
     name: color
 };
 console.log(obj2); // => { name: "名前" }
+
+const obj3 = {
+    key: "value",
+    123:456
+};
+// ドット記法で参照
+console.log(obj3.key); // => "value"
+// ブラケット記法で参照
+console.log(obj3["key"]); // => "value"
+// console.log(obj.123); NG
+console.log(obj3[123]);
+
+const languages = {
+    ja: "日本語",
+    en: "英語"
+};
+const ja = languages.ja;
+const en = languages.en;
+console.log(ja); // => "日本語"
+console.log(en); // => "英語"
+// 何度もlanguages.ja;と書くのはだるい
