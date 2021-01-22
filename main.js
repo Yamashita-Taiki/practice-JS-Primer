@@ -63,3 +63,17 @@ const a = [1,2,3]
 a.forEach(v => {
     console.log(v)
 });
+
+const name = "名前";
+// `name`というプロパティ名で`name`の変数を値に設定したオブジェクト
+const obj = {
+    name: name
+};
+console.log(obj); // => { name: "名前" }
+
+const color = "blue";
+// `name`というプロパティ名で`name`の変数を値に設定したオブジェクト
+const obj2 = {
+    name: color
+};
+console.log(obj2); // => { name: "名前" }
