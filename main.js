@@ -105,3 +105,14 @@ const sparseArray = [1,, 3];
 console.log(sparseArray.length); // => 3
 // 1番目の要素は存在しないため undefined が返る
 console.log(sparseArray[1]); // => undefined
+
+
+// 疎な配列で該当するインデックスに要素がない場合はundefinedを返します。 しかし、undefinedという値も存在するため、配列にundefinedという値がある場合に区別できません。
+// 次のコードでは、undefinedという値を要素として定義した密な配列と、要素そのものがない疎な配列を定義しています。 どちらも要素にアクセスした結果はundefinedとなり、区別できていないことがわかります。
+
+// 要素として`undefined`を持つ密な配列
+const denseArray = [1, undefined, 3];
+// 要素そのものがない疎な配列
+const sparseArray = [1, , 3];
+console.log(denseArray[1]); // => undefined
+console.log(sparseArray[1]); // => undefined
