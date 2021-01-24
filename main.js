@@ -98,3 +98,10 @@ const en = languages.en;
 console.log(ja); // => "日本語"
 console.log(en); // => "英語"
 // 何度もlanguages.ja;と書くのはだるい
+
+// 未定義の箇所が1つ含まれる疎な配列
+// インデックスが1の値を省略しているので、カンマが2つ続いていることに注意
+const sparseArray = [1,, 3];
+console.log(sparseArray.length); // => 3
+// 1番目の要素は存在しないため undefined が返る
+console.log(sparseArray[1]); // => undefined
