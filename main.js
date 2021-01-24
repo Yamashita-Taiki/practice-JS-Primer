@@ -116,3 +116,24 @@ const denseArray = [1, undefined, 3];
 const sparseArray = [1, , 3];
 console.log(denseArray[1]); // => undefined
 console.log(sparseArray[1]); // => undefined
+
+
+// この違いを見つける方法として利用できるのがObject#hasOwnPropertyメソッドです。 hasOwnPropertyメソッドを使うことで、配列の指定したインデックスに要素自体が存在するかを判定できます。
+
+const denseArray = [1, undefined, 3];
+const sparseArray = [1, , 3];
+// 要素自体は`undefined`値が存在する
+console.log(denseArray.hasOwnProperty(1)); // => true
+// 要素自体がない
+console.log(sparseArray.hasOwnProperty(1)); // => false
+
+
+// 指定した要素が配列のどの位置にあるかを知りたい場合、Array#indexOfメソッドやArray#findIndexメソッド[ES2015]を利用します。 要素の位置のことをインデックス（index）と呼ぶため、メソッド名にもindexという名前が入っています。
+// 次のコードでは、Array#indexOfメソッドを利用して、配列の中から"JavaScript"という文字列のインデックスを取得しています。 indexOfメソッドは引数と厳密等価演算子（===）で一致する要素があるなら、その要素のインデックスを返し、該当する要素がない場合は-1を返します。 indexOfメソッドは先頭から検索して見つかった要素のインデックスを返します。 indexOfメソッドには対となるArray#lastIndexOfメソッドがあり、lastIndexOfメソッドでは末尾から検索した結果が得られます。
+
+const array = ["Java", "JavaScript", "Ruby"];
+const indexOfJS = array.indexOf("JavaScript");
+console.log(indexOfJS); // => 1
+console.log(array[indexOfJS]); // => "JavaScript"
+// "JS" という要素はないため `-1` が返される
+console.log(array.indexOf("JS")); // => -1
