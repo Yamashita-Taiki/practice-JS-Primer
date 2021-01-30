@@ -167,3 +167,9 @@ const single = '文字列';
 console.log(single); // => '文字列'
 // どちらも同じ文字列
 console.log(double === single);// => true
+
+// バッククオートは改行を認識してくれる
+const back = `1
+2
+3`
+console.log(back)
